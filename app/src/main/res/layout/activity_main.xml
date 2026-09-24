@@ -69,7 +69,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintWidth_max="420dp" />
 
-    <!-- Botón 1: "Escribir nueva carta" (acabado dorado brillante con icono de pluma azul) -->
+    <!-- Botón 1: "Escribir nueva carta" (acabado dorado brillante con icono de pluma acorde a la paleta) -->
     <Button
         android:id="@+id/btnEscribirCarta"
         style="@style/Widget.DarkAcademia.BotonDorado"
