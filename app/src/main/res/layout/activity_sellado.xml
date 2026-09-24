@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/selladoRootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_fondo"
+    android:paddingStart="18dp"
+    android:paddingEnd="18dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="16dp">
+
+    <!-- ============================================================== -->
+    <!-- ENCABEZADO: Sello de lacre, Título y Fecha de Sellado          -->
+    <!-- ============================================================== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingBottom="12dp">
+
+        <!-- Icono de Candado / Sello inmutable sin fondo rojo -->
+        <ImageView
+            android:id="@+id/ivCandadoSellado"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/ic_candado"
+            android:contentDescription="@string/icono_carta_desc"
+            android:scaleType="fitCenter" />
+
+        <!-- Indicador de estado de sellado inmutable -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="CARTA SELLADA AL FUTURO"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.15"
+            android:fontFamily="serif"
+            android:textColor="@color/color_dorado_brillante" />
+
+        <TextView
+            android:id="@+id/tvTituloSellado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Correspondencia Inmutable"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:textColor="@color/color_texto_principal"
+            tools:text="Carta al Futuro #1" />
+
+        <!-- Fecha y hora exacta de sellado -->
+        <TextView
+            android:id="@+id/tvFechaSellado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Sellada el 22/09/2026 14:30"
+            android:textSize="13sp"
+            android:fontFamily="serif"
+            android:textColor="@color/color_texto_secundario"
+            tools:text="Sellada el 22/09/2026 14:30" />
+
+        <!-- Distintivo opcional si fue sellada al agotarse el tiempo en background -->
+        <TextView
+            android:id="@+id/tvInsigniaBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="⏳ Sellada automáticamente al agotarse el tiempo"
+            android:textSize="11sp"
+            android:fontFamily="serif"
+            android:textColor="@color/color_dorado"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <!-- Línea divisoria dorada decorativa -->
+        <View
+            android:layout_width="140dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_divisor_dorado" />
+    </LinearLayout>
+
+    <!-- ============================================================== -->
+    <!-- CUERPO: Contenedor con Scroll y TextView de solo lectura       -->
+    <!-- (Sin EditText: el contenido es permanente e inmodificable)     -->
+    <!-- ============================================================== -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:background="@drawable/bg_pergamino"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false">
+
+        <TextView
+            android:id="@+id/tvContenidoCarta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:gravity="top|start"
+            android:textSize="16sp"
+            android:fontFamily="serif"
+            android:lineSpacingExtra="6dp"
+            android:textColor="@color/color_texto_principal"
+            android:textIsSelectable="true"
+            tools:text="Querido yo del futuro...\n\nAquí queda grabada esta carta inmutable como testimonio de este instante." />
+    </ScrollView>
+
+    <!-- ============================================================== -->
+    <!-- PIE: Botón de navegación hacia la lista de cartas              -->
+    <!-- ============================================================== -->
+    <Button
+        android:id="@+id/btnVolverMisCartas"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/bg_boton_dorado"
+        android:drawableStart="@drawable/ic_sobre_azul"
+        android:drawablePadding="10dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:fontFamily="serif"
+        android:text="Volver a Mis cartas"
+        android:textAllCaps="false"
+        android:textColor="@color/color_fondo"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:elevation="2dp" />
+
+</LinearLayout>

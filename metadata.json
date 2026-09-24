@@ -1,0 +1,6 @@
+{
+  "name": "Carta al Futuro",
+  "description": "Aplicación de escritura reflexiva con temporizador de 10 minutos y persistencia del estado en el ciclo de vida.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

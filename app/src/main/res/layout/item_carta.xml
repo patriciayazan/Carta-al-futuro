@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_tarjeta_dark"
+    android:padding="14dp">
+
+    <!-- Fila superior: ID y Fecha -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvItemId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Carta #1"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:textColor="@color/color_dorado_brillante" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tvItemFecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22/09/2026 10:45"
+            android:textSize="12sp"
+            android:fontFamily="serif"
+            android:textColor="@color/color_texto_secundario" />
+    </LinearLayout>
+
+    <!-- Resumen/Vista previa del texto -->
+    <TextView
+        android:id="@+id/tvItemExtracto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="Querido yo del futuro, espero que cuando leas esto hayas logrado..."
+        android:textSize="14sp"
+        android:fontFamily="serif"
+        android:textColor="@color/color_texto_principal" />
+
+    <!-- Etiqueta si se selló en segundo plano -->
+    <TextView
+        android:id="@+id/tvItemBackgroundBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="⏳ Sellada mientras no mirabas"
+        android:textSize="11sp"
+        android:fontFamily="serif"
+        android:textColor="@color/color_dorado"
+        android:visibility="gone" />
+
+</LinearLayout>

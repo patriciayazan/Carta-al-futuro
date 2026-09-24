@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paleta Dark Academia - Carta al Futuro -->
+    <color name="color_fondo">#1A1712</color>
+    <color name="color_superficie">#2B241C</color>
+    <color name="color_tarjeta">#251F18</color>
+    <color name="color_pergamino">#1E1A14</color>
+    <color name="color_texto_principal">#E8DCC4</color>
+    <color name="color_texto_secundario">#A89A7E</color>
+    <color name="color_dorado">#B8935A</color>
+    <color name="color_dorado_brillante">#C9A66B</color>
+    <color name="color_lacre_vino">#7A2E2E</color>
+    <color name="color_lacre_oscuro">#5C1F1F</color>
+    <color name="color_borde">#42372A</color>
+    
+    <!-- Compatibilidad base -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/escrituraRootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_fondo"
+    android:paddingStart="18dp"
+    android:paddingEnd="18dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="16dp">
+
+    <!-- SECCIÓN SUPERIOR: Cronómetro grande MM:SS y encabezado decorativo -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingBottom="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TIEMPO RESTANTE"
+            android:textSize="11sp"
+            android:fontFamily="serif"
+            android:letterSpacing="0.15"
+            android:textColor="@color/color_texto_secundario" />
+
+        <!-- Cronómetro grande central en formato MM:SS con estilo Dark Academia -->
+        <TextView
+            android:id="@+id/textViewTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="10:00"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:textColor="@color/color_dorado_brillante"
+            android:letterSpacing="0.05"
+            android:gravity="center"
+            tools:text="09:42" />
+
+        <!-- Línea sutil divisoria bajo el cronómetro -->
+        <View
+            android:layout_width="140dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_divisor_dorado" />
+    </LinearLayout>
+
+    <!-- SECCIÓN CENTRAL: Campo de texto multilínea simulando papel pergamino -->
+    <EditText
+        android:id="@+id/editTextCarta"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/bg_pergamino"
+        android:padding="20dp"
+        android:gravity="top|start"
+        android:hint="Querido yo del futuro...\n\nEscribe aquí con total franqueza. Cuéntame en qué estás pensando, tus temores, tus metas y lo que esperas recordar cuando el tiempo haya pasado.\n\nEl reloj no se detiene a menos que tú decidas pausarlo."
+        android:textColorHint="@color/color_texto_secundario"
+        android:textColor="@color/color_texto_principal"
+        android:textSize="16sp"
+        android:fontFamily="serif"
+        android:lineSpacingExtra="6dp"
+        android:inputType="textMultiLine|textCapSentences"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false"
+        android:cursorVisible="true"
+        android:textCursorDrawable="@null"
+        tools:text="Aquí van las reflexiones de la carta..." />
+
+    <!-- SECCIÓN INFERIOR: Botones de control "Pausar/Reanudar" y "Sellar ahora" -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Botón Pausar / Reanudar -->
+        <Button
+            android:id="@+id/btnPausarReanudar"
+            style="@style/Widget.DarkAcademia.BotonSecundario"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="⏸  Pausar"
+            android:textSize="14sp" />
+
+        <!-- Botón Sellar ahora (rojo lacre/vino con acento de sello y candado) -->
+        <Button
+            android:id="@+id/btnSellarAhora"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_boton_lacre"
+            android:drawableStart="@drawable/ic_candado_btn"
+            android:drawablePadding="8dp"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:fontFamily="serif"
+            android:text="Sellar ahora"
+            android:textAllCaps="false"
+            android:textColor="@color/color_texto_principal"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:elevation="2dp" />
+    </LinearLayout>
+
+</LinearLayout>

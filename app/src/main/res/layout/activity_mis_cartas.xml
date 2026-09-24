@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_fondo"
+    android:padding="16dp">
+
+    <!-- Encabezado de la lista -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mis Cartas Selladas"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="serif"
+                android:textColor="@color/color_dorado_brillante" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guardadas en la memoria de la sesión actual"
+                android:textSize="12sp"
+                android:fontFamily="serif"
+                android:textColor="@color/color_texto_secundario" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnNuevaDesdeLista"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_boton_dorado"
+            android:text="+ Nueva"
+            android:textAllCaps="false"
+            android:textColor="@color/color_fondo"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:fontFamily="serif" />
+    </LinearLayout>
+
+    <!-- Lista de cartas -->
+    <ListView
+        android:id="@+id/listViewCartas"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp" />
+
+    <!-- Estado vacío (cuando no hay cartas aún) -->
+    <LinearLayout
+        android:id="@+id/layoutVacio"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📜"
+            android:textSize="48sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Aún no has sellado ninguna carta"
+            android:textSize="16sp"
+            android:fontFamily="serif"
+            android:textColor="@color/color_texto_secundario" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Escribe tu primera carta a tu yo del futuro."
+            android:textSize="13sp"
+            android:fontFamily="serif"
+            android:textColor="@color/color_dorado" />
+    </LinearLayout>
+
+    <!-- Botón Volver al Menú Principal -->
+    <Button
+        android:id="@+id/btnVolverInicio"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_tarjeta_dark"
+        android:text="← Volver al inicio"
+        android:textAllCaps="false"
+        android:textColor="@color/color_dorado"
+        android:textSize="14sp"
+        android:fontFamily="serif" />
+
+</LinearLayout>

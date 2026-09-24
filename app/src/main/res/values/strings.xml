@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Carta al Futuro</string>
+    <string name="icono_carta_desc">Icono de carta</string>
+    <string name="icono_pluma_desc">Icono de pluma</string>
+    <string name="icono_sobre_desc">Icono de sobre de carta</string>
+    <string name="escribir_nueva_carta">Escribir nueva carta</string>
+    <string name="mis_cartas_selladas">Mis cartas selladas</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.CartaAlFuturo" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/color_fondo</item>
+        <item name="colorPrimary">@color/color_dorado</item>
+        <item name="colorPrimaryDark">@color/color_fondo</item>
+        <item name="colorAccent">@color/color_dorado_brillante</item>
+        <item name="android:textColorPrimary">@color/color_texto_principal</item>
+        <item name="android:textColorSecondary">@color/color_texto_secundario</item>
+    </style>
+</resources>

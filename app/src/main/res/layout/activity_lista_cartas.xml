@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/listaCartasRootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_fondo"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="18dp"
+    android:paddingBottom="16dp">
+
+    <!-- Encabezado superior con título y botón para escribir una nueva carta -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="14dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MIS CARTAS SELLADAS"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.15"
+                android:fontFamily="serif"
+                android:textColor="@color/color_dorado_brillante" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Archivo de la Sesión"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="serif"
+                android:textColor="@color/color_texto_principal" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnNuevaDesdeLista"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:background="@drawable/bg_boton_dorado"
+            android:drawableStart="@drawable/ic_pluma"
+            android:drawablePadding="6dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:text="Redactar"
+            android:textAllCaps="false"
+            android:textColor="@color/color_fondo"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:elevation="2dp" />
+    </LinearLayout>
+
+    <!-- Línea divisoria dorada sutil -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/bg_divisor_dorado" />
+
+    <!-- RecyclerView para listar todas las cartas selladas -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCartas"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/item_carta_sellada" />
+
+    <!-- Vista de estado vacío (se muestra cuando no hay cartas en memoria) -->
+    <LinearLayout
+        android:id="@+id/layoutVacio"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📜"
+            android:textSize="54sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="El archivo está en silencio"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:textColor="@color/color_texto_principal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Aún no has sellado ninguna carta hacia tu futuro."
+            android:textSize="13sp"
+            android:fontFamily="serif"
+            android:textColor="@color/color_texto_secundario" />
+    </LinearLayout>
+
+    <!-- Botón inferior para volver al inicio -->
+    <Button
+        android:id="@+id/btnVolverInicio"
+        style="@style/Widget.DarkAcademia.BotonSecundario"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:text="← Volver al inicio"
+        android:textSize="14sp" />
+
+</LinearLayout>

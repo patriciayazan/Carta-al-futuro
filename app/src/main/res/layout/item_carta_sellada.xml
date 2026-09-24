@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:orientation="vertical"
+    android:background="@drawable/bg_tarjeta_dorada_clickable"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="16dp">
+
+    <!-- Fila superior: Sello pequeño, Identificador de carta y Fecha de sellado -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Pequeño icono de candado sellado -->
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_candado_btn"
+            android:contentDescription="@null"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/tvItemTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Carta #1"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:textColor="@color/color_dorado_brillante"
+            tools:text="Carta #1" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <!-- Fecha y hora de sellado -->
+        <TextView
+            android:id="@+id/tvItemFecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22/09/2026 14:35"
+            android:textSize="12sp"
+            android:fontFamily="serif"
+            android:textColor="@color/color_texto_secundario"
+            tools:text="22/09/2026 14:35" />
+    </LinearLayout>
+
+    <!-- Fila central: Fragmento de texto (primeras palabras) -->
+    <TextView
+        android:id="@+id/tvItemFragmento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textSize="14sp"
+        android:fontFamily="serif"
+        android:lineSpacingExtra="3dp"
+        android:textColor="@color/color_texto_principal"
+        tools:text="Querido yo del futuro, espero que cuando leas esta carta hayas cumplido tus promesas..." />
+
+    <!-- Fila inferior: Indicador discreto de sellado e indicación táctil (chevron) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvItemBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inmutable y sellada"
+            android:textSize="11sp"
+            android:fontFamily="serif"
+            android:textColor="@color/color_texto_secundario" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leer completa ›"
+            android:textSize="12sp"
+            android:fontFamily="serif"
+            android:textStyle="bold"
+            android:textColor="@color/color_dorado" />
+    </LinearLayout>
+
+</LinearLayout>

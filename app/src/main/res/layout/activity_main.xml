@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_fondo"
+    android:paddingStart="28dp"
+    android:paddingEnd="28dp"
+    android:paddingTop="36dp"
+    android:paddingBottom="24dp">
+
+    <!-- Icono / Imagen superior de carta -->
+    <ImageView
+        android:id="@+id/ivCarta"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_carta"
+        android:contentDescription="@string/icono_carta_desc"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textViewTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Título principal con tipografía serif -->
+    <TextView
+        android:id="@+id/textViewTitulo"
+        style="@style/TextAppearance.DarkAcademia.Titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Carta al Futuro"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/ivCarta"
+        app:layout_constraintBottom_toTopOf="@id/divisorDorado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Divisor decorativo sutil en gradiente dorado -->
+    <View
+        android:id="@+id/divisorDorado"
+        android:layout_width="160dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/bg_divisor_dorado"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitulo"
+        app:layout_constraintBottom_toTopOf="@id/textViewSubtitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Subtítulo reflexivo con tipografía serif y tono crema pergamino -->
+    <TextView
+        android:id="@+id/textViewSubtitulo"
+        style="@style/TextAppearance.DarkAcademia.Subtitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Escríbete una carta a tu yo del futuro.\nTendrás 10 minutos de introspección para plasmar tus anhelos antes de que el sello de cera cierre tus palabras para siempre."
+        android:textColor="@color/color_texto_principal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/divisorDorado"
+        app:layout_constraintBottom_toTopOf="@id/btnEscribirCarta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_max="420dp" />
+
+    <!-- Botón 1: "Escribir nueva carta" (acabado dorado brillante con icono de pluma azul) -->
+    <Button
+        android:id="@+id/btnEscribirCarta"
+        style="@style/Widget.DarkAcademia.BotonDorado"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="40dp"
+        android:drawableStart="@drawable/ic_pluma"
+        android:drawablePadding="10dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:text="@string/escribir_nueva_carta"
+        app:layout_constraintTop_toBottomOf="@id/textViewSubtitulo"
+        app:layout_constraintBottom_toTopOf="@id/btnMisCartas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_max="360dp" />
+
+    <!-- Botón 2: "Mis cartas" (fondo oscuro con borde y acento dorado con icono de sobre azul) -->
+    <Button
+        android:id="@+id/btnMisCartas"
+        style="@style/Widget.DarkAcademia.BotonSecundario"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="14dp"
+        android:drawableStart="@drawable/ic_sobre_azul"
+        android:drawablePadding="10dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:text="@string/mis_cartas_selladas"
+        app:layout_constraintTop_toBottomOf="@id/btnEscribirCarta"
+        app:layout_constraintBottom_toTopOf="@id/tvPieDePagina"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_max="360dp" />
+
+    <!-- Leyenda inferior decorativa / Pie de página vintage -->
+    <TextView
+        android:id="@+id/tvPieDePagina"
+        style="@style/TextAppearance.DarkAcademia.Leyenda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="MEMENTO TEMPUS  •  UNIVERSIDAD DE NARIÑO"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/btnMisCartas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
